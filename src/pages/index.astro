@@ -1,15 +1,49 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const tagline =
+	'I build engineering teams, the products they ship and the platforms underneath.';
 ---
 
-<Base title="Nicolas Senechal" description="Personal site of Nicolas Senechal.">
-	<h1>Nicolas Senechal</h1>
-	<p>
-		Placeholder copy. This is the personal site of Nicolas Senechal; something more interesting
-		will live here soon.
-	</p>
-	<p class="muted">Writing coming soon.</p>
-	<footer>
-		<a href="mailto:nicolas@senechal.me">nicolas@senechal.me</a>
-	</footer>
+<Base title="Nicolas Sénéchal" description={`Head of Engineering in Melbourne. ${tagline}`}>
+	<div class="page">
+		<div class="planes plane-blue" aria-hidden="true"></div>
+		<div class="planes plane-grey" aria-hidden="true"></div>
+		<div class="band" aria-hidden="true">
+			<div class="plane-blue"></div>
+			<div class="plane-grey"></div>
+		</div>
+		<div class="wrap">
+			<header class="intro">
+				<p class="eyebrow">Head of Engineering, Melbourne</p>
+				<h1 class="name">Nicolas Sénéchal</h1>
+				<p class="tagline">{tagline}</p>
+			</header>
+			<main class="bio">
+				<p>
+					I lead through engineering managers and technical leaders, and I build that layer before
+					I scale a team. At ANZ, that meant growing the web team to 65, shipping web banking
+					features, and building continuous deployment inside a bank.
+				</p>
+				<p>
+					Before that, at SEEK, I partnered with product to unify search across three brands and
+					launch it in Hong Kong on usage data and A/B tests. Earlier: Pivot, lastminute.com and
+					NVIDIA.
+				</p>
+				<p>
+					I also build products myself to stay sharp. Wine Twins is a wine recommendation platform
+					where agents wrote the code, tests were the gate, and every merge was my call.
+				</p>
+			</main>
+			<p class="status">
+				<span class="status-marker" aria-hidden="true"></span>Open to new roles in Melbourne and
+				Sydney
+			</p>
+			<nav class="links" aria-label="Contact and links">
+				<a href="https://www.linkedin.com/in/senechal/">LinkedIn</a>
+				<a href="https://winetwins.co">Wine Twins</a>
+				<a href="mailto:nicolas@senechal.me">nicolas@senechal.me</a>
+			</nav>
+		</div>
+	</div>
 </Base>

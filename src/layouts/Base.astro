@@ -21,14 +21,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 		<link rel="canonical" href={canonical} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#FFFFFF" />
 		<meta name="generator" content={Astro.generator} />
-		<Font cssVariable="--font-body" preload={[{ style: 'normal' }]} />
+		<Font cssVariable="--font-sans" preload />
+		<Font cssVariable="--font-serif" preload />
 	</head>
 	<body>
-		<main>
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
