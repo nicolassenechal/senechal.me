@@ -88,14 +88,14 @@ a:focus-visible {
 	gap: 22px;
 }
 
-.eyebrow,
+.label,
 .name,
 .status,
 .links {
 	font-family: var(--font-sans);
 }
 
-.eyebrow {
+.label {
 	margin: 0;
 	font-weight: 500;
 	font-size: 14px;
@@ -121,6 +121,13 @@ a:focus-visible {
 	color: var(--muted);
 }
 
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+	max-width: 1040px;
+}
+
 .bio {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -134,19 +141,54 @@ a:focus-visible {
 	margin: 0;
 }
 
+.writing {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.writing-list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.writing-title {
+	margin: 0 0 6px;
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 1.35;
+}
+
+.writing-meta {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.55;
+	max-width: 62ch;
+	color: var(--muted);
+}
+
+.writing-source {
+	color: var(--ink);
+}
+
 .status {
 	display: flex;
 	align-items: center;
 	gap: 12px;
 	margin: 24px 0 0;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 19px;
 }
 
 .status-marker {
 	flex: none;
-	width: 10px;
-	height: 10px;
+	width: 12px;
+	height: 12px;
 	background: var(--blue);
 }
 
