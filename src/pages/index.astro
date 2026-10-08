@@ -1,35 +1,44 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const headline =
-	'Head of Engineering in Melbourne. I build engineering organisations and the platforms they run on.';
-
-const links = [
-	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/senechal' },
-	{ label: 'Wine Twins', href: 'https://winetwins.co' },
-	{ label: 'nicolas@senechal.me', href: 'mailto:nicolas@senechal.me' },
-];
+const tagline = 'I build engineering organisations and the platforms they run on.';
 ---
 
-<Base title="Nicolas Sénéchal" description={headline}>
-	<header>
-		<h1>Nicolas Sénéchal</h1>
-		<p class="headline">{headline}</p>
-	</header>
-	<p>
-		I lead through engineering managers and technical leaders, and I build that layer before I
-		scale a team. At ANZ, that meant growing the web team to 65 and building continuous deployment
-		inside a bank.
-	</p>
-	<p>Before that: SEEK, Pivot, lastminute.com and NVIDIA.</p>
-	<p>
-		I also build things myself to stay sharp. Wine Twins is a wine recommendation platform where
-		agents wrote the code, tests were the gate, and every merge was my call.
-	</p>
-	<footer>
-		<p>Open to Head of Engineering roles in Melbourne and Sydney.</p>
-		<ul class="links">
-			{links.map(({ label, href }) => <li><a href={href}>{label}</a></li>)}
-		</ul>
-	</footer>
+<Base title="Nicolas Sénéchal" description={`Head of Engineering in Melbourne. ${tagline}`}>
+	<div class="page">
+		<div class="planes plane-blue" aria-hidden="true"></div>
+		<div class="planes plane-grey" aria-hidden="true"></div>
+		<div class="band" aria-hidden="true">
+			<div class="plane-blue"></div>
+			<div class="plane-grey"></div>
+		</div>
+		<div class="wrap">
+			<header class="intro">
+				<p class="eyebrow">Head of Engineering, Melbourne</p>
+				<h1 class="name">Nicolas Sénéchal</h1>
+				<p class="tagline">{tagline}</p>
+			</header>
+			<main class="bio">
+				<p>
+					I lead through engineering managers and technical leaders, and I build that layer before
+					I scale a team. At ANZ, that meant growing the web team to 65 and building continuous
+					deployment inside a bank.
+				</p>
+				<p>Before that: SEEK, Pivot, lastminute.com and NVIDIA.</p>
+				<p>
+					I also build things myself to stay sharp. Wine Twins is a wine recommendation platform
+					where agents wrote the code, tests were the gate, and every merge was my call.
+				</p>
+			</main>
+			<p class="status">
+				<span class="status-marker" aria-hidden="true"></span>Open to new roles in Melbourne and
+				Sydney
+			</p>
+			<nav class="links" aria-label="Contact and links">
+				<a href="https://www.linkedin.com/in/senechal/">LinkedIn</a>
+				<a href="https://winetwins.co">Wine Twins</a>
+				<a href="mailto:nicolas@senechal.me">nicolas@senechal.me</a>
+			</nav>
+		</div>
+	</div>
 </Base>
