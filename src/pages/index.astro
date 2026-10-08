@@ -1,12 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const headline = [
-	'Head of Engineering',
-	'Product and platform engineering',
-	'Scaled teams to 60+ through managers and technical leaders',
-	'AI adoption in engineering teams',
-];
+const headline =
+	'Head of Engineering in Melbourne. I build engineering organisations and the platforms they run on.';
 
 const links = [
 	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/senechal' },
@@ -15,24 +11,25 @@ const links = [
 ];
 ---
 
-<Base title="Nicolas Sénéchal" description={headline.join(' · ')}>
+<Base title="Nicolas Sénéchal" description={headline}>
 	<header>
 		<h1>Nicolas Sénéchal</h1>
-		<p class="headline">
-			{headline.map((item) => <span>{item}</span>)}
-		</p>
+		<p class="headline">{headline}</p>
 	</header>
 	<p>
-		I build engineering organisations and platforms that last, and then I build things on my own
-		to stay sharp. Over 20 years I have moved from engineer at NVIDIA and EA, through architecture
-		at lastminute.com, to leading engineering at SEEK, Pivot and ANZ, where I scaled the web team
-		to 65 and built continuous deployment inside a bank. I lead through engineering managers and
-		principal engineers, and I treat engineering decisions as business decisions. Most recently I
-		built Wine Twins, a wine recommendation platform, to go
-		deep on AI-assisted delivery: agents wrote the code, tests were the gate, and every merge
-		decision stayed with me.
+		I lead through engineering managers and technical leaders, and I build that layer before I
+		scale a team. At ANZ, that meant growing the web team to 65 and building continuous deployment
+		inside a bank.
 	</p>
-	<ul class="links">
-		{links.map(({ label, href }) => <li><a href={href}>{label}</a></li>)}
-	</ul>
+	<p>Before that: SEEK, Pivot, lastminute.com and NVIDIA.</p>
+	<p>
+		I also build things myself to stay sharp. Wine Twins is a wine recommendation platform where
+		agents wrote the code, tests were the gate, and every merge was my call.
+	</p>
+	<footer>
+		<p>Open to Head of Engineering roles in Melbourne and Sydney.</p>
+		<ul class="links">
+			{links.map(({ label, href }) => <li><a href={href}>{label}</a></li>)}
+		</ul>
+	</footer>
 </Base>
