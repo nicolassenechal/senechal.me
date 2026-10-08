@@ -88,14 +88,14 @@ a:focus-visible {
 	gap: 22px;
 }
 
-.eyebrow,
+.label,
 .name,
 .status,
 .links {
 	font-family: var(--font-sans);
 }
 
-.eyebrow {
+.label {
 	margin: 0;
 	font-weight: 500;
 	font-size: 14px;
@@ -121,6 +121,13 @@ a:focus-visible {
 	color: var(--muted);
 }
 
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+	max-width: 1040px;
+}
+
 .bio {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -132,6 +139,40 @@ a:focus-visible {
 
 .bio p {
 	margin: 0;
+}
+
+.writing {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.writing-list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.writing-title {
+	margin: 0 0 6px;
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+.writing-meta {
+	margin: 0;
+	max-width: 62ch;
+	color: var(--muted);
+}
+
+.writing-source {
+	color: var(--ink);
 }
 
 .status {

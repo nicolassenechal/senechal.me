@@ -3,6 +3,15 @@ import Base from '../layouts/Base.astro';
 
 const tagline =
 	'I build engineering teams, the products they ship and the platforms underneath.';
+const writing = [
+	{
+		title: 'Building the ANZx web engineering platform and team',
+		href: 'https://anzengineeringway.substack.com/p/building-the-anzx-web-engineering',
+		source: "ANZ's Engineering Way, 2024",
+		summary:
+			"How we built Bluestone, ANZx's web platform, and a team shipping to production a dozen times a day.",
+	},
+];
 ---
 
 <Base title="Nicolas Sénéchal" description={`Head of Engineering in Melbourne. ${tagline}`}>
@@ -15,25 +24,44 @@ const tagline =
 		</div>
 		<div class="wrap">
 			<header class="intro">
-				<p class="eyebrow">Head of Engineering, Melbourne</p>
+				<p class="label">Head of Engineering, Melbourne</p>
 				<h1 class="name">Nicolas Sénéchal</h1>
 				<p class="tagline">{tagline}</p>
 			</header>
-			<main class="bio">
-				<p>
-					I lead through engineering managers and technical leaders, and I build that layer before
-					I scale a team. At ANZ, that meant growing the web team to 65, shipping web banking
-					features, and building continuous deployment inside a bank.
-				</p>
-				<p>
-					Before that, at SEEK, I partnered with product to unify search across three brands and
-					launch it in Hong Kong on usage data and A/B tests. Earlier: Pivot, lastminute.com and
-					NVIDIA.
-				</p>
-				<p>
-					I also build products myself to stay sharp. Wine Twins is a wine recommendation platform
-					where agents wrote the code, tests were the gate, and every merge was my call.
-				</p>
+			<main class="content">
+				<div class="bio">
+					<p>
+						I lead through engineering managers and technical leaders, and I build that layer before
+						I scale a team. At ANZ, that meant growing the web team to 65, shipping web banking
+						features, and building continuous deployment inside a bank.
+					</p>
+					<p>
+						Before that, at SEEK, I partnered with product to unify search across three brands and
+						launch it in Hong Kong on usage data and A/B tests. Earlier: Pivot, lastminute.com and
+						NVIDIA.
+					</p>
+					<p>
+						I also build products myself to stay sharp. Wine Twins is a wine recommendation platform
+						where agents wrote the code, tests were the gate, and every merge was my call.
+					</p>
+				</div>
+				<section class="writing" aria-labelledby="writing-heading">
+					<h2 class="label" id="writing-heading">Writing</h2>
+					<ul class="writing-list">
+						{
+							writing.map(({ title, href, source, summary }) => (
+								<li>
+									<h3 class="writing-title">
+										<a href={href}>{title}</a>
+									</h3>
+									<p class="writing-meta">
+										<span class="writing-source">{source}.</span> {summary}
+									</p>
+								</li>
+							))
+						}
+					</ul>
+				</section>
 			</main>
 			<p class="status">
 				<span class="status-marker" aria-hidden="true"></span>Open to new roles in Melbourne and
