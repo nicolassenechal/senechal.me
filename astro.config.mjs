@@ -13,6 +13,7 @@ export default defineConfig({
 			styles: ['normal'],
 			subsets: ['latin'],
 			fallbacks: ['Helvetica Neue', 'sans-serif'],
+			display: 'block',
 		},
 		{
 			provider: fontProviders.google(),
@@ -22,6 +23,7 @@ export default defineConfig({
 			styles: ['normal'],
 			subsets: ['latin'],
 			fallbacks: ['Georgia', 'serif'],
+			display: 'block',
 			options: { experimental: { variableAxis: { opsz: [['8', '60']] } } },
 		},
 	],
