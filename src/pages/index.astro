@@ -1,15 +1,38 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const headline = [
+	'Head of Engineering',
+	'Product and platform engineering',
+	'Scaled teams to 60+ through managers and technical leaders',
+	'AI adoption in engineering teams',
+];
+
+const links = [
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/senechal' },
+	{ label: 'Wine Twins', href: 'https://winetwins.co' },
+	{ label: 'nicolas@senechal.me', href: 'mailto:nicolas@senechal.me' },
+];
 ---
 
-<Base title="Nicolas Senechal" description="Personal site of Nicolas Senechal.">
-	<h1>Nicolas Senechal</h1>
+<Base title="Nicolas Sénéchal" description={headline.join(' · ')}>
+	<header>
+		<h1>Nicolas Sénéchal</h1>
+		<p class="headline">
+			{headline.map((item) => <span>{item}</span>)}
+		</p>
+	</header>
 	<p>
-		Placeholder copy. This is the personal site of Nicolas Senechal; something more interesting
-		will live here soon.
+		I build engineering organisations and platforms that last, and then I build things on my own
+		to stay sharp. Over 20 years I have moved from engineer at NVIDIA and EA, through architecture
+		at lastminute.com, to leading engineering at SEEK, Pivot and ANZ, where I scaled the web team
+		to 65 and built continuous deployment inside a bank. I lead through engineering managers and
+		principal engineers, and I treat engineering decisions as business decisions. Most recently I
+		built <a href="https://winetwins.co">Wine Twins</a>, a wine recommendation platform, to go
+		deep on AI-assisted delivery: agents wrote the code, tests were the gate, and every merge
+		decision stayed with me.
 	</p>
-	<p class="muted">Writing coming soon.</p>
-	<footer>
-		<a href="mailto:nicolas@senechal.me">nicolas@senechal.me</a>
-	</footer>
+	<ul class="links">
+		{links.map(({ label, href }) => <li><a href={href}>{label}</a></li>)}
+	</ul>
 </Base>

@@ -79,14 +79,23 @@ a:focus-visible {
 	border-radius: 2px;
 }
 
-.muted {
+.headline {
 	color: var(--muted);
+	font-size: 1.05em;
+	line-height: 1.45;
+	margin-bottom: 2.5rem;
 }
 
-footer {
-	margin-top: 4rem;
-	padding-top: 1.5rem;
+.headline span:not(:last-child)::after {
+	content: ' · ';
+}
+
+.links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	list-style: none;
+	margin: 2.5rem 0 0;
+	padding: 1.5rem 0 0;
 	border-top: 1px solid var(--rule);
-	color: var(--muted);
-	font-size: 0.9em;
 }
